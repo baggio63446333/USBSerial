@@ -73,7 +73,7 @@ void USBSerial::begin(unsigned long baud, uint8_t config)
     snprintf(node, sizeof(node), "/dev/ttyACM0");
     dev = node;
 
-    _fd = open(dev, O_RDWR);
+    _fd = open(dev, O_RDWR | O_NONBLOCK);
     if (_fd < 0) {
         printf("ERROR: _fd=%d\n", _fd);
         return;

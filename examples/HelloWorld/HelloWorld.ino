@@ -5,7 +5,7 @@
 
 #include <USBSerial.h>
 
-USBSerial USBSerial;
+USBSerial UsbSerial;
 
 void setup()
 {
@@ -13,7 +13,7 @@ void setup()
   Serial.begin(115200);
 
   // Use USB serial port on extension board
-  USBSerial.begin(115200);
+  UsbSerial.begin(115200);
 }
 
 void loop()
@@ -22,7 +22,7 @@ void loop()
   Serial.println("Hello World");
 
   // Print USB serial port on extension board
-  USBSerial.println("Hello World");
+  UsbSerial.println("Hello World");
 
   delay(1000);
 }
